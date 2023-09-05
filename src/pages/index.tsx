@@ -26,7 +26,13 @@ export default function Home() {
       <main
         className={`flex min-h-screen flex-col items-center justify-between px-0 md:px-24`}
       >
-        <div className="mx-auto max-w-2xl min-h-screen lg:max-w-5xl dark:bg-zinc-900 p-12 w-full">
+        <div className="mx-auto max-w-2xl relative min-h-screen lg:max-w-5xl dark:bg-zinc-900 p-12 w-full">
+          <Link 
+            href={"/users"}
+            className="absolute right-20 top-16 border border-neutral-700 rounded-lg p-4"
+          >
+            Users
+          </Link>
           <header className="max-w-2xl">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">Writing about software development and random things</h1>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">A lot of night thoughts are written here.</p>

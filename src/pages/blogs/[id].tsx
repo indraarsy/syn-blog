@@ -26,7 +26,6 @@ type Query = {
 }
 
 const BlogsDetails = (props: Props) => {
-  console.log(props.comments)
   return(
     <>
       <title>{props.post.title}</title>
