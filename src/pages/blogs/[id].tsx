@@ -18,7 +18,7 @@ type Props = {
     name: string;
     email: string;
     body: string;
-  }
+  }[]
 }
 
 type Query = {

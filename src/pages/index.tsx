@@ -15,11 +15,10 @@ type Post = {
 
 export default function Home() {
   const [curPage, setCurPage] = useState<number>(1)
-  const { data }: Post[] = trpc.getAllPosts.useQuery({
+
+  const { data } = trpc.getAllPosts.useQuery<Post[]>({
     page: curPage
   });
-
-  console.log({data})
 
   return (
     <>
@@ -30,7 +29,7 @@ export default function Home() {
         <div className="mx-auto max-w-2xl min-h-screen lg:max-w-5xl dark:bg-zinc-900 p-12 w-full">
           <header className="max-w-2xl">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">Writing about software development and random things</h1>
-            <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">A lot of night thoughts are written here.</p>
+            <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">A lot of night thoughts are written here.</p>
           </header>
           <div className="mb-0 grid pt-8 lg:max-w-5xl gap-4 lg:w-full lg:mb-0 lg:grid-cols-1 lg:text-left">
             {data && data.map((item, index) => (
